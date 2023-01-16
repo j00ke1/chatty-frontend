@@ -1,0 +1,201 @@
+:root {
+  --red: #E63946;
+  --honeydew: #F1FAEE;
+  --blue-light: #A8DADC;
+  --blue-mid: #457B9D;
+  --blue-dark: #1D3557;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: var(--blue-dark);
+}
+
+.App {
+  height: 100vh;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  color: var(--honeydew);
+  max-width: 600px;
+  height: 100vh;
+}
+
+.intro-container>h1,
+.intro-container>h3 {
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.intro-container>input,
+select {
+  margin: 10px 0 20px 0;
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--honeydew)
+}
+
+.intro-container>button {
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 120%;
+  cursor: pointer;
+  background-color: var(--red);
+  border: none;
+  box-shadow: 1px 1px 5px black;
+  color: var(--honeydew)
+}
+
+.intro-container>button:active {
+  box-shadow: 1px 1px 5px black inset;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: var(--honeydew);
+  max-width: 900px;
+  height: 100%;
+  position: relative;
+}
+
+.room-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35px;
+}
+
+.user-details:hover {
+  cursor: pointer;
+}
+
+.users-modal {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 1;
+  color: var(--honeydew);
+  background-color: var(--blue-dark);
+  padding: 20px;
+  border: 1px solid var(--blue-light);
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.users-modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.users-modal h4 {
+  margin: 0 20px 0 0;
+}
+
+.users-modal>ul {
+  list-style: none;
+}
+
+.users-modal button {
+  background-color: var(--blue-dark);
+  color: var(--honeydew);
+  border: none;
+  cursor: pointer;
+}
+
+.room-info>button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--red);
+  color: var(--honeydew);
+  cursor: pointer;
+}
+
+.message-container {
+  background-color: var(--honeydew);
+  height: 100%;
+  color: black;
+  overflow-y: scroll;
+}
+
+.message-actions {
+  border-top: 2px solid var(--blue-dark);
+}
+
+.message-actions>form {
+  height: 100%;
+}
+
+.message-actions>form>input {
+  background-color: var(--honeydew);
+  width: calc(100% - 56px);
+  padding: 20px 10px;
+  border: none;
+}
+
+.message-actions>form>input:focus-visible {
+  outline: none;
+}
+
+.message-actions>form>button {
+  height: 56px;
+  width: 56px;
+  padding: 0 5px;
+  height: 100%;
+  border: none;
+  background-color: var(--red);
+  color: var(--honeydew);
+}
+
+.message-wrapper {
+  padding: 10px;
+}
+
+
+.message-main {
+  color: var(--honeydew);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.message-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-small;
+  padding: 5px;
+}
+
+div.message-wrapper[style~="padding-right:"] .message-main {
+  background-color: var(--blue-mid);
+}
+
+div.message-wrapper[style~="padding-left:"] .message-main {
+  background-color: var(--blue-dark);
+}
